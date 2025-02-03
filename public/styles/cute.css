@@ -6,6 +6,7 @@ body {
   background-size: auto;  /* Keeps the image in its natural size */
   background-attachment: fixed;  /* Keeps the background fixed while scrolling */
   background-position: top left;  /* Positions it at the top left corner */
+  background-repeat: no-repeat;
 }
 
 .main {
