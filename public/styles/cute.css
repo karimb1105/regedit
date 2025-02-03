@@ -2,7 +2,11 @@ body {
   font-size:12px;
   font-family: "Verdana", sans-serif;
   background: #663348;
-  }
+  background-image: url('../images/stardewvalley.png');  /* Path to the image */
+  background-size: auto;  /* Keeps the image in its natural size */
+  background-attachment: fixed;  /* Keeps the background fixed while scrolling */
+  background-position: top left;  /* Positions it at the top left corner */
+}
 
 .main {
   margin: 0 auto;
@@ -34,7 +38,7 @@ body {
 
 /*Prevent overflow of large images in main text areas.*/
 .text img {
-  max-width: 100%;
+  max-width: 100px;
   height: auto;
   }
 
@@ -46,16 +50,6 @@ body {
   background:#1d1c32;
   padding-top:3px;
   padding-bottom:6px;
-  text-align:center;
-  }
-
-/*Classes for links section.*/
-.links {
-  font-size:12px;
-  color:white;
-  background:#1d1c32;
-  padding-top:1px;
-  padding-bottom:5px;
   text-align:center;
   }
 
@@ -84,6 +78,32 @@ body {
 .links li:hover { /*The color link buttons turn when hovered over*/
   background: #774459;
   }
+
+/* Make the .links div position relative */
+.links {
+  position: relative;  /* This is important for positioning the GIF within this div */
+  font-size: 12px;
+  color: white;
+  background: #1d1c32;
+  padding-top: 1px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.home-gif {
+  position: absolute; /* Position it relative to the .links div */
+  left: 0;  /* Stick it to the far left of the .links div */
+  top: 50%; /* Center it vertically */
+  transform: translateY(-70%); /* Fine-tune centering */
+}
+
+.home-gif img {
+  width: 100px;  /* Adjust size */
+  height: auto;
+  padding-left: 4px;
+  padding-top: 20px;
+}
+
 
 .footer {
   font-size:12px;
