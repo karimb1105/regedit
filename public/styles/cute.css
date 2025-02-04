@@ -150,6 +150,11 @@ body {
   text-align:center;
 }
 
+.footer img {
+  height: 31px;
+  width: 88px;
+}
+
 @media (max-width: 640px) {
   .wrapper {
     flex-direction: column; /* Stack left and main containers in smaller screens */
