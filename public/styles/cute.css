@@ -1,6 +1,11 @@
+@font-face {
+  font-family: pixelmplus10;
+  font-weight: 400;
+  src: url(../fonts/pixelmplus10-regular.ttf);
+}
+
 body {
-  font-size:12px;
-  font-family: "Verdana", sans-serif;
+  font-family: "pixelmplus10", sans-serif;
   background: #663348;
   background-image: url('../images/stardewvalley.png');
   background-size: 100% 100%;
@@ -13,6 +18,8 @@ body {
 }
 
 .wrapper {
+  font-size:12px;
+  font-family: "pixelmplus10", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
