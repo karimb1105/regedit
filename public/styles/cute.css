@@ -89,6 +89,12 @@ body {
   text-align:center;
 }
 
+.left-sub img {
+  margin: 0;
+  padding: 0;
+  /* Ensures no extra space below the image */
+}
+
 .sub img {
   height: 15px;
   width: auto;
@@ -125,6 +131,10 @@ body {
   padding-top: 1px;
   padding-bottom: 5px;
   text-align: center;
+  display: flex; /* Align the links horizontally */
+  flex-wrap: wrap; /* Allow links to wrap if needed */
+  gap: 0.5em; /* Space between each link */
+  justify-content: flex-start; /* Align links to the left */
 }
 
 .home-gif {
@@ -137,8 +147,6 @@ body {
 .home-gif img {
   width: 100px;
   height: auto;
-  padding-left: 4px;
-  padding-top: 20px;
 }
 
 .footer {
