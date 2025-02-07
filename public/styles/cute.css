@@ -242,4 +242,9 @@ body {
   .main {
     max-width: 100%;
   }
+
+  body, html {
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+    width: 100%;  /* Ensure the page width doesn't exceed 100% */
+  }
 }
