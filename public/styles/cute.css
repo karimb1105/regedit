@@ -259,16 +259,4 @@ body {
   .text-lost p {
     font-size: 16px;  /* Adjust paragraph font size */
   }
-
-  /* Adjust links and their layout */
-  .links {
-    font-size: 14px;  /* Increase font size for readability */
-    flex-direction: column;  /* Stack links vertically on mobile */
-    align-items: center;  /* Center the links */
-  }
-
-  .links li {
-    width: 100%;  /* Ensure each link takes full width */
-    text-align: center;
-  }
 }
