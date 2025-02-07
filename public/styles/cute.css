@@ -138,7 +138,7 @@ body {
 .separator {
   width: 100%;
   height: 50px;
-  background-image: url('../images/tea-leaves.PNG');
+  background-image: url('../images/tea-leaves.png');
   background-repeat: repeat-x;
   background-size: auto 100%;
   background-position: center;
