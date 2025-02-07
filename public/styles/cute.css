@@ -30,7 +30,7 @@ body {
 }
 
 .left-container {
-  width: 200px;
+  max-width: 200px;
   background: #4b554a;
   padding: 5px;
   margin: 0;
@@ -38,15 +38,31 @@ body {
 }
 
 .left-container img {
-  width: 100px;
+  max-width: 100px;
   height: auto;
 }
 
 .main {
-  width: 600px;
+  max-width: 600px;
   border: 4px solid #4c5549;
-  border-radius: 3px;
   margin: 0 auto;
+}
+
+.main-lost {
+  max-width: 600px;
+  border: 4px solid #4c5549;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.updates {
+  border: 4px solid #4c5549;
+  margin: 0 auto;
+  height: 200px;
+  overflow-y: auto;
 }
 
 .header {
@@ -56,19 +72,44 @@ body {
 }
 
 .header img {
-  width:100%;
+  max-width:100%;
   padding:0px;
   display:block;
 }
 
 .text {
   background:#e8e1cb;
+  align-items: center;
   padding:1em;
 }
 
+.text-lost {
+  background:#e8e1cb;
+  padding:1em;
+  text-align: center;
+}
+
 .text img {
-  max-width: 100px;
+  max-width: 100%;
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-image 0.3s ease;
+  }
+.text img:hover {
+  filter: brightness(1.15);
+}
+.text-lost img {
+  max-width: 400px;
+  height: auto;
+  border: 4px solid #854851; /* Adjust thickness and color as needed */
+  border-radius: 8px; /* Optional: rounds the corners */
+  padding: 4px; /* Optional: adds space between the image and the border */
+}
+
+.text img:hover {
+  background: 4px solid #854851;
 }
 
 .sub {
@@ -92,7 +133,22 @@ body {
 .left-sub img {
   margin: 0;
   padding: 0;
-  /* Ensures no extra space below the image */
+}
+
+.separator {
+  width: 100%;
+  height: 50px;
+  background-image: url('../images/tea-leaves.PNG');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
+  background-size: contain;
+}
+
+.separator img {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 .sub img {
@@ -145,7 +201,7 @@ body {
 }
 
 .home-gif img {
-  width: 100px;
+  max-width: 100px;
   height: auto;
 }
 
@@ -159,20 +215,32 @@ body {
 }
 
 .footer img {
-  height: 31px;
-  width: 88px;
+  max-height: 31px;
+  max-width: 88px;
 }
 
 @media (max-width: 640px) {
   .wrapper {
     flex-direction: column; /* Stack left and main containers in smaller screens */
     align-items: center;
+    width: 100%;
   }
   .left-container {
-    width: 100%;
+    max-width: 90%;
     text-align: center;
   }
   .main {
-    width: 100%;
+    max-width: 90%;
   }
+
+@media (max-width: 400px) {
+  .main-lost {
+    width: 95%; /* Further adjusts for smaller devices */
+  }
+
+  .text-lost {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+
 }
