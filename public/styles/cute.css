@@ -220,17 +220,26 @@ body {
 }
 
 @media only screen and (max-width: 390px) and (max-height: 844px) {
+  body {
+    background-image: url('../images/stardewvalley.png');
+    background-size: cover;  /* Ensures the image covers the entire area without stretching */
+    background-position: center center;  /* Keeps the center of the image visible */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, keeps the background fixed while scrolling */
+  }
+
   .wrapper {
     flex-direction: column; /* Stack left and main containers in smaller screens */
     align-items: center;
     width: 100%;
   }
+
   .left-container {
     max-width: 100%;
     text-align: center;
   }
+
   .main {
     max-width: 100%;
   }
-
 }
