@@ -13,11 +13,11 @@
     }
 
     .text-lost h1 {
-        font-size: 1.5rem; /* Adjusts font size for smaller screens */
+        font-size: 1.5rem;
     }
 
     .text-lost img {
-        max-width: 80%; /* Scales down image further on very small screens */
+        max-width: 80%;
     }
 
     .main-lost {
