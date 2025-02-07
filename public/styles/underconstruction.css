@@ -5,3 +5,22 @@
     border-radius: 8px; /* Optional: rounds the corners */
     padding: 4px; /* Optional: adds space between the image and the border */
   }
+
+  @media only screen and (max-width: 600px) {
+    .text-lost {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .text-lost h1 {
+        font-size: 1.5rem; /* Adjusts font size for smaller screens */
+    }
+
+    .text-lost img {
+        max-width: 80%; /* Scales down image further on very small screens */
+    }
+
+    .main-lost {
+        padding: 10px;
+    }
+}
