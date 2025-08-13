@@ -5,7 +5,7 @@
 }
 
 .music-page img {
-  max-width: min(300px, 100%);
+  max-width: min(365px, 100%);
   height: auto;
   display: block;
   margin: 0 auto;
@@ -15,6 +15,13 @@
   font-size: 2em;
   color: #e8e1cb;
   margin: 1em 0 0.5em 0;
+  padding-left: 10px;
+  padding-top: 40px;
+  text-shadow:
+    -2px -2px 0 #333333,
+     2px -2px 0 #333333,
+    -2px  2px 0 #333333,
+     2px  2px 0 #333333;
 }
 
 /* CONTAINER FOR ALBUMS */
@@ -26,8 +33,8 @@
 
 /* ALBUM CARD */
 .music-page .album-card {
-  width: 150px; /* Controls card width */
-  background: #e8e1cb;
+  width: 180px; /* Controls card width */
+  background: #f1e7df;
   border: 2px solid #4c5549;
   border-radius: 6px;
   padding: 0.5em;
@@ -52,22 +59,93 @@
 body {
   font-family: "w95fa", sans-serif;
   background: #4b554a;
-  background-image: url('../images/stardewvalley.png');
-  background-size: 100% 100%;
+  background-image: url('../images/stardew-background.webp');
+  background-size: cover;
   background-attachment: fixed;
-  background-position: top left;
+  background-position: center;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
+body.body-home {
+  font-family: "w95fa", sans-serif;
+  background: #4b554a;
+  background-image: url('../images/stardew-background.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding-top: 10vh; /* pushes the page down */
+  height: 100%;
+}
+
 body.body-lost {
+  background-image: url('../images/lost.webp');
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
+}
+
+body.music-page {
+  background-image: url('../images/lost.webp')
+}
+
+.button {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  z-index: 1000;
+  cursor: pointer;
+  font-family: "w95fa", sans-serif;
+  display: inline-block;
+}
+
+/* Arrow image */
+.button img {
+  display: block;
+  width: 80px; /* adjust size */
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.button:hover img {
+  filter: brightness(1.3);
+}
+
+/* Tooltip container */
+.tooltip-text {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-8px, -50%);
+  color: #e8e220;
+  padding-top: 5px;
+  border-radius: 4px;
+  font-size: 50px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+  font-family: "w95fa", sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  user-select: none;
+  z-index: 1001;
+  text-shadow:
+    -2px -2px 0 #333333,
+     2px -2px 0 #333333,
+    -2px  2px 0 #333333,
+     2px  2px 0 #333333;
+}
+
+/* Show tooltip immediately on hover */
+.button:hover .tooltip-text {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .wrapper {
@@ -100,13 +178,13 @@ body.body-lost {
   border: 4px solid #4c5549;
   margin: 0 auto;
 }
-
+/*
 .main-lost {
   max-width: 600px;
   border: 4px solid #4c5549;
   margin: auto;
 }
-
+*/
 .updates {
   border: 4px solid #4c5549;
   margin: 0 auto;
@@ -133,7 +211,7 @@ body.body-lost {
 }
 
 .text-lost {
-  background:#e8e1cb;
+  color: #f1e7df;
   padding:1em;
   text-align: center;
 }
@@ -145,14 +223,16 @@ body.body-lost {
   margin-left: auto;
   margin-right: auto;
   transition: background-image 0.3s ease;
-  }
+}
+
 .text img:hover {
   filter: brightness(1.15);
 }
+
 .text-lost img {
   max-width: 400px;
   height: auto;
-  border: 4px solid #854851; /* Adjust thickness and color as needed */
+  border: 4px solid #347367; /* Adjust thickness and color as needed */
   border-radius: 8px; /* Optional: rounds the corners */
   padding: 4px; /* Optional: adds space between the image and the border */
 }
@@ -296,16 +376,18 @@ body.body-lost {
    .text-lost img {
     max-width: 80%;  /* Adjust image width on mobile */
     height: auto;
-    border: 3px solid #b56f28;  /* Adjust border width on mobile */
+    border: 3px solid #000021;  /* Adjust border width on mobile */
     padding: 4px;
   }
 
   /* Adjust text size for smaller screens */
   .text-lost h1 {
+    color: #f1e7df;
     font-size: 24px;  /* Adjust header size */
   }
 
   .text-lost p {
+    color: #f1e7df;
     font-size: 16px;  /* Adjust paragraph font size */
   }
 
