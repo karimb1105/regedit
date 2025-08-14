@@ -8,15 +8,19 @@
 </head>
 <body class="our-story-page">
     <a href="#" class="button"></a>
-    <audio id="background-audio" src="../images/nocturne-laufey.mp3" autoplay loop></audio>
+    <audio autoplay loop class="background-audio" id="background-audio">
+        <source src="https://raw.githubusercontent.com/karimb1105/kilo/main/basics/nocturne.mp3" type="audio/mpeg">
+    </audio>
     <script>
-        const button = document.querySelector('.button');
-        const audio = document.getElementById('background-audio');
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.querySelector('.button');
+            const audio = document.getElementById('background-audio');
 
-        button.addEventListener('click', (e) => {
-            e.preventDefault();                  // prevent default link behavior
-            button.classList.toggle('toggled'); // swap image back/forth
-            audio.muted = !audio.muted;         // toggle audio mute
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                button.classList.toggle('toggled');
+                audio.muted = !audio.muted;
+            });
         });
     </script>
     <header>
