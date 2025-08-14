@@ -16,10 +16,13 @@
             const button = document.querySelector('.button');
             const audio = document.getElementById('background-audio');
 
+            audio.muted = true;  // start muted
+            audio.play().catch(err => console.log(err));
+
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 button.classList.toggle('toggled');
-                audio.muted = !audio.muted;
+                audio.muted = !audio.muted;  // toggle mute
             });
         });
     </script>
