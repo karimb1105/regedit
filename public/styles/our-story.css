@@ -98,7 +98,6 @@ header p {
 .timeline-event {
     background: #f1e7df;
     border: 4px solid #4c5549;
-    border-radius: 6px;
     padding: 1rem;
     width: 200px;
     flex-shrink: 0;
