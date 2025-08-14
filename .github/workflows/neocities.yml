@@ -3,14 +3,14 @@ name: Deploy to Neocities
 on:
   push:
     branches:
-      - main  # or whichever branch you deploy from
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
@@ -23,8 +23,7 @@ jobs:
 
       - name: Deploy files individually
         run: |
-          # Loop through all files in public/
           for file in $(find public -type f); do
             echo "Uploading $file"
-            neocities upload "$file" --key ${{ secrets.NEOCITIES_API_TOKEN }}
+            npx neocities upload "$file" --key ${{ secrets.NEOCITIES_API_TOKEN }}
           done
