@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Neocities CLI
-        run: npm install -g neocities
+      - name: Install Neocities CLI locally
+        run: npm install neocities
 
       - name: Deploy files individually
         run: |
