@@ -25,5 +25,5 @@ jobs:
         run: |
           for file in $(find public -type f); do
             echo "Uploading $file"
-            npx neocities upload "$file" --key ${{ secrets.NEOCITIES_API_TOKEN }}
+            npx neocities upload "$file" --key $NEOCITIES_API_TOKEN
           done
