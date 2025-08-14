@@ -94,17 +94,19 @@ header p {
     padding: 0 1rem;
 }
 
-/* EVENT CARD */
 .timeline-event {
     background: #f1e7df;
     border: 4px solid #4c5549;
-    padding: 1rem;
     width: 200px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1rem;
+    max-height: 425px;       /* total card height */
+    box-sizing: border-box;
+    overflow: hidden;        /* prevent card scroll */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -123,23 +125,43 @@ header p {
 }
 
 /* EVENT CONTENT */
-.event-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.event-image {
     width: 100%;
+    flex: 0 0 auto;          /* image keeps its size */
+    margin-bottom: 0.5rem;
 }
 
-.event-content img {
+.event-image img {
     width: 100%;
+    height: auto;
+    object-fit: cover;       /* scale nicely without distortion */
     border-radius: 4px;
     border: 2px solid #4c5549;
+    display: block;
 }
 
-.event-content p {
+/* TEXT SECTION */
+.event-text {
+    width: 100%;
+    flex: 1 1 auto;          /* take remaining space */
+    overflow-y: auto;        /* vertical scroll if needed */
+    overflow-x: hidden;      /* no horizontal scroll */
+}
+.event-text p {
     font-size: 1rem;
     color: #333;
     margin: 0;
+    word-wrap: break-word;   /* wrap long words instead of scrolling */
+}
+
+/* width */
+::-webkit-scrollbar {
+width: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #36a73250;
 }
 
 /* MOBILE RESPONSIVE */
