@@ -165,6 +165,7 @@ header p {
     flex-wrap: auto;
     gap: 20px;
 }
+
 .footer-content {
     max-height: 150px;
     overflow-y: auto;
