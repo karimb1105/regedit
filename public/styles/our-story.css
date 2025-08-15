@@ -156,6 +156,32 @@ header p {
     word-wrap: break-word;   /* wrap long words instead of scrolling */
 }
 
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: auto;
+    gap: 20px;
+}
+.footer-content {
+    max-height: 150px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    color: #e8e1cb;
+    background-color: #4b554a;
+}
+
+.footer-img img {
+    max-height: 150px;
+    display: block;
+}
+
 /* width */
 ::-webkit-scrollbar {
 width: 2px;
