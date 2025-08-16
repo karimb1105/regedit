@@ -164,6 +164,7 @@ header p {
     margin: 0 auto;
     flex-wrap: auto;
     gap: 20px;
+    padding-bottom: 50px;
 }
 
 .footer-content {
@@ -176,6 +177,10 @@ header p {
     font-size: 0.9rem;
     color: #e8e1cb;
     background-color: #4b554a;
+}
+
+.footer-content img {
+    height: 30px;
 }
 
 .footer-img img {
