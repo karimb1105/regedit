@@ -198,23 +198,34 @@ width: 2px;
 background: #36a73250;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 800px) {
-    .body-our-story-page {
-        background-attachment: fixed;
-    }
-    .timeline-event {
-        width: 45%; /* two cards per row */
+@media (max-width: 1024px) {
+    body.our-story-page {
+        background-attachment: fixed; /* avoid iOS zoom bug */
     }
 }
 
-@media (max-width: 500px) {
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .body-our-story-page {
+        background-attachment: scroll;
+    }
     .timeline-event {
-        width: 90%; /* one card per row on very small screens */
+        width: 100%;
+        max-width: 500px;
     }
 
     .timeline {
-        justify-content: center; /* center single cards */
+        justify-content: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-img img {
+        margin-bottom: 1rem;
     }
 
     header h1 {
@@ -225,3 +236,4 @@ background: #36a73250;
         font-size: 1rem;
     }
 }
+
