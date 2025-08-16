@@ -200,7 +200,7 @@ background: #36a73250;
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 800px) {
-    .body.our-story-page {
+    .body-our-story-page {
         background-attachment: scroll;
     }
     .timeline-event {
