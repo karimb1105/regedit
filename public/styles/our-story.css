@@ -160,6 +160,15 @@ header h1 {
          2px  2px 0 #333333;
 }
 
+.password-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.password-link:hover {
+    filter: brightness(2.0);
+    cursor: pointer; 
+}
 .plain-link {
     text-decoration: none; /* remove underline */
     color: inherit;        /* use the h1/text color instead of default blue */
