@@ -175,11 +175,30 @@ body.music-page {
   height: auto;
 }
 
+.counter {
+  text-align: center;
+}
+
+.right-container {
+  width: 250px;
+  height: 250px;
+  background: #4b554a;
+}
 .main {
   max-width: 600px;
   border: 4px solid #4c5549;
   margin: 0 auto;
 }
+
+::-webkit-scrollbar {
+width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #90e68d50;
+}
+
 /*
 .main-lost {
   max-width: 600px;
@@ -189,14 +208,13 @@ body.music-page {
 */
 .updates {
   border: 4px solid #4c5549;
-  margin: 0 auto;
+  margin: 0px auto;
   height: 200px;
   overflow-y: auto;
 }
 
 .header {
   border-bottom:4px solid #4c5549;
-  padding:0px;
   overflow-y:auto;
 }
 
@@ -209,9 +227,11 @@ body.music-page {
 .text {
   background:#e8e1cb;
   align-items: center;
-  padding: 1em;
-}
+  padding: 1em}
 
+.text-update {
+  color: #e8e1cb;
+}
 .text-lost {
   color: #f1e7df;
   padding:1em;
@@ -349,18 +369,18 @@ body.music-page {
   max-height: 31px;
   max-width: 88px;
 }
-/* 
+/*
 @media only screen and (max-width: 390px) and (max-height: 844px) {
   body {
     background-image: url('../images/stardewvalley.png');
-    background-size: cover;  /* Ensures the image covers the entire area without stretching 
-    background-position: center center;  
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
+    background-size: cover;  /* Ensures the image covers the entire area without stretching
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .wrapper {
-    flex-direction: column; /* Stack left and main containers in smaller screens 
+    flex-direction: column; /* Stack left and main containers in smaller screens
     align-items: center;
     width: 100%;
   }
@@ -374,18 +394,18 @@ body.music-page {
     max-width: 100%;
   }
 
-   /* Ensure images inside .text-lost are responsive 
+   /* Ensure images inside .text-lost are responsive
    .text-lost img {
-    max-width: 80%;  /* Adjust image width on mobile 
+    max-width: 80%;  /* Adjust image width on mobile
     height: auto;
-    border: 3px solid #000021;  /* Adjust border width on mobile 
+    border: 3px solid #000021;  /* Adjust border width on mobile
     padding: 4px;
   }
 
-  /* Adjust text size for smaller screens 
+  /* Adjust text size for smaller screens
   .text-lost h1 {
     color: #f1e7df;
-    font-size: 24px;  /* Adjust header size 
+    font-size: 24px;  /* Adjust header size
   }
 
   .text-lost p {
