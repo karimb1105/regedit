@@ -4,6 +4,12 @@
   src: url(../fonts/w95fa.woff);
 }
 
+:root {
+  --background-light: #e8e1cb;
+  --background-light-green: #dff7d5;
+  --background-dark-green: #7aa469;
+}
+
 .music-page img {
   max-width: min(365px, 100%);
   height: auto;
@@ -176,18 +182,79 @@ body.music-page {
 }
 
 .counter {
+  margin-top: 20px;
   text-align: center;
 }
 
+.container {
+  background-color: #4b554a;
+}
+
 .right-container {
-  width: 250px;
-  height: 250px;
+  width: auto;
+  height: auto;
   background: #4b554a;
 }
+
+.currently {
+  position: relative;
+  width: 195px;
+  height: 250px;
+  border: 5px double #6a7264;
+  border-radius: 10px;
+  overflow: hidden; /* ensures the overlay stays inside the box */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.currently img {
+  max-height: 100px;
+  border: 5px double #6a7264;
+}
+
+.currently-text {
+  font-size: 18px;
+  text-align: center;
+}
+
+.image img {
+  max-width: 75px;
+  border: none;
+}
+
+.currently::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background-color: var(--background-light);
+  background-size: cover;
+  opacity: 0.7; /* 50% transparency */
+  z-index: 0;
+}
+
+.currently > * {
+  position: relative;
+  z-index: 1; /* puts text/content above the background */
+}
+/* Grid layout for currently boxes */
+.currently-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* space between boxes */
+  margin: 10px 0;
+}
 .main {
-  max-width: 600px;
-  border: 4px solid #4c5549;
+  max-width: 700px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid #6c7f65;
+  background-color: #4b554a;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
@@ -214,7 +281,7 @@ background: #90e68d50;
 }
 
 .header {
-  border-bottom:4px solid #4c5549;
+  border-bottom:4px solid #6c7f65;
   overflow-y:auto;
 }
 
@@ -227,7 +294,24 @@ background: #90e68d50;
 .text {
   background:#e8e1cb;
   align-items: center;
-  padding: 1em}
+  padding: 1em
+}
+
+.text-header {
+    border: 1px solid #4c5549;
+    background: linear-gradient(#4c5549, #6a7264 40%, #4c5549);
+    color: #f1e7df;
+    text-shadow: 2px 2px 3px #2e332b;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.text-right {
+  align-items: center;
+  padding: 1em
+}
 
 .text-update {
   color: #e8e1cb;
@@ -267,7 +351,7 @@ background: #90e68d50;
   font-size:16px;
   font-weight:bold;
   color: #e8e1cb;
-  background:#4b554a;
+  background:#6c7f65;
   padding-top:3px;
   padding-bottom:6px;
   text-align:center;
@@ -357,12 +441,14 @@ background: #90e68d50;
 }
 
 .footer {
-  font-size:12px;
-  color:white;
-  background:#4b554a;
-  padding-top:4px;
-  padding-bottom:1px;
-  text-align:center;
+  width: 100%;
+  text-align: center;
+  color: #f1e7df;
+  background: #6c7f65;
+  padding: 10px;
+  margin-top: 20px;
+  border-top: 2px solid #6c7f65;
+  box-sizing: border-box;
 }
 
 .footer img {
