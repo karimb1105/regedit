@@ -199,49 +199,35 @@ body.music-page {
 .currently {
   position: relative;
   width: 195px;
-  height: 250px;
+  height: auto;
   border: 5px double #6a7264;
   border-radius: 10px;
   overflow: hidden; /* ensures the overlay stays inside the box */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow-y: 100px scroll;
 }
 
 .currently img {
-  max-height: 100px;
+  max-height: 150px;
   border: 5px double #6a7264;
+  background-color: var(--background-light);
 }
 
 .currently-text {
   font-size: 18px;
   text-align: center;
+  background-color: var(--background-light);
 }
 
 .image img {
   max-width: 75px;
   border: none;
 }
-
-.currently::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
-  background-color: var(--background-light);
-  background-size: cover;
-  opacity: 0.7; /* 50% transparency */
-  z-index: 0;
-}
-
-.currently > * {
-  position: relative;
-  z-index: 1; /* puts text/content above the background */
-}
 /* Grid layout for currently boxes */
 .currently-grid {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px; /* space between boxes */
   margin: 10px 0;
 }
@@ -275,6 +261,7 @@ background: #90e68d50;
 */
 .updates {
   border: 4px solid #4c5549;
+  background-color: var(--background-light);
   margin: 0px auto;
   height: 200px;
   overflow-y: auto;
@@ -297,6 +284,13 @@ background: #90e68d50;
   padding: 1em
 }
 
+.text-main {
+  background:#e8e1cb;
+  align-items: center;
+  padding: 1em;
+  font-size: 18px;
+}
+
 .text-header {
     border: 1px solid #4c5549;
     background: linear-gradient(#4c5549, #6a7264 40%, #4c5549);
@@ -314,7 +308,8 @@ background: #90e68d50;
 }
 
 .text-update {
-  color: #e8e1cb;
+  color: black;
+  padding: 5px;
 }
 .text-lost {
   color: #f1e7df;
