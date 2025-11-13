@@ -13,9 +13,8 @@
         <div class="left-sub">
           <img src="images/citylights.gif">
           <img src="images/this-is-the-end.gif">
-          <img src="images/karim.gif">
         </div>
-
+        <div class="blinky"><img src="images/karim.gif"></div>
         <div class="links">
           <ul>
             <li><a href="pages/sitemap.html">Sitemap</a></li>
@@ -36,16 +35,18 @@
         <div class="updates">
           <div class="text-update">
             <h2>Updates:</h2>
-            <p><b>11/06/2025, 10:12PM </b> Added the "currently" section. Restructured main page.</p>
-            <p><b>09/30/2025, 10:01AM </b> Password protected Alex's page. Intruders out!</p>
-            <p><b>08/16/2025, 9:45PM </b> Completed <a href="pages/alex.html">Alex's birthday page</a>. Hopefully he likes it :P</p>
-            <p><b>08/14/2025, 2:34AM: </b> Started Alex's gallery page.</p>
+            <div id="text-update"></div>
             <a href="pages/changelog.html"><img src="buttons/vscode.png"/></a>
+            <script>
+              fetch('iframe-changelog.html')
+                .then(response => response.text())
+                .then(html => {
+                  document.getElementById('text-update').innerHTML = html;
+                });
+            </script>
           </div>
         </div>
       </div>
-
-      <!-- MAIN CONTENT -->
       <div class="main">
         <div class="container">
           <div class="header"><img src="images/gatheringstorm.jpg"></div>
@@ -86,21 +87,30 @@
             <div class="currently">
               <div class="text-header"><p>Currently Watching</p></div>
               <div class="currently-text">
-                <p>YOU: Season 1, Episode 3</p>
+                <p>YOU: Season 1, Episode 8</p>
+                <div class="w3-green" style="height:18px;width:80%">
+                  <div class="progress-text">80%</div>
+                </div>
               </div>
             </div>
 
             <div class="currently">
               <div class="text-header"><p>Currently Reading</p></div>
               <div class="currently-text">
-                <p>The Hobbit: Page 1/407</p>
+                <p>The Fellowship of the Ring: Page 80/398</p>
+                <div class="w3-green" style="height:18px;width:18%">
+                  <div class="progress-text">18%</div>
+                </div>
               </div>
             </div>
 
             <div class="currently">
               <div class="text-header"><p>日本語 Progress</p></div>
               <div class="currently-text">
-                <p>640/1500 of Kaishi</p>
+                <p>795/1500 of Kaishi</p>
+                <div class="w3-green" style="height:18px;width:53%">
+                  <div class="progress-text">53%</div>
+                </div>
               </div>
             </div>
           </div>

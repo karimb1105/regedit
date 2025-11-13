@@ -207,6 +207,7 @@ body.music-page {
   flex-direction: column;
   box-sizing: border-box;
   overflow-y: 100px scroll;
+  font-size: 16px;
 }
 
 .currently img {
@@ -216,7 +217,7 @@ body.music-page {
 }
 
 .currently-text {
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
   background-color: var(--background-light);
 }
@@ -263,8 +264,8 @@ background: #90e68d50;
   border: 4px solid #4c5549;
   background-color: var(--background-light);
   margin: 0px auto;
-  height: 200px;
-  overflow-y: auto;
+  height: 316px;
+  overflow-y: scroll;
 }
 
 .header {
@@ -297,7 +298,6 @@ background: #90e68d50;
     color: #f1e7df;
     text-shadow: 2px 2px 3px #2e332b;
     text-align: center;
-    padding: 5px;
     box-sizing: border-box;
     flex-shrink: 0;
 }
@@ -317,6 +317,17 @@ background: #90e68d50;
   text-align: center;
 }
 
+
+.w3-green{
+  color:#fff!important;
+  background-color:#4CAF50!important;
+}
+
+.progress-text {
+  text-align: left;
+  padding-left: 2px;
+  padding-top: 1.5px;
+}
 .text img {
   max-width: 100%;
   height: auto;
@@ -351,13 +362,19 @@ background: #90e68d50;
   padding-bottom:6px;
   text-align:center;
 }
-
+.blinky img {
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .left-sub {
   font-size:16px;
   font-weight:bold;
   color: #e8e1cb;
   background:#4b554a;
   text-align:center;
+  display: flex;
 }
 
 .left-sub img {

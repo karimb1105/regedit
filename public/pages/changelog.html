@@ -11,15 +11,14 @@
         <div class="main">
             <div class="text">
             <h1>Changelog</h1>
-            <p><b>09/30/2025, 10:01AM: </b> Password protected Alex's page. Intruders out!</p>
-            <p><b>08/16/2025, 9:45PM: </b> Completed Alex's birthday page recounting our entire story. Hopefully he likes it :P</p>
-            <p><b>08/14/2025, 2:34AM: </b> Started Alex's gallery page. Found romantic background, new CSS approach for the gallery, added in music and an on/off toggle with stardew valley themed icon.</p>
-            <p><b>08/12/2025, 9:40PM: </b> Added in my karim blinky. Updated 404 error and under construction pages, finalized CSS on music page.</p>
-            <p><b>08/11/2025, 12:15AM: </b> Added music and reading pages, still works in progress!</p>
-            <p><a><b>02/06/2025, 11:03PM: </b>Added a div separator, made "recent updates" with overflow scrolling on the left container, created a custom <a href="../not_found.html">404 error page.</a> Added an "under construction" placeholder for pages that I'm working on.</p>
-            <p><b>02/03/2025, 8:16PM: </b>Redid color scheme and updated font to w95fa, fixed padding on left bar</p>
-            <p><b>02/03/2025, 7:24PM:</b> Changed font, replaced navbar with a sidebar, updated CSS for changelog and sitemap pages</p>
-            <p><b>02/03/2025, 8:47AM:</b> Added sitemap.html, changelog.html, linked various images, updated navbar, added background photo</p>
+            <div id="text-update"></div>
+            <script>
+              fetch('../iframe-changelog.html')
+                .then(response => response.text())
+                .then(html => {
+                  document.getElementById('text-update').innerHTML = html;
+                });
+            </script>
             </div>
         </div>
     </body>
