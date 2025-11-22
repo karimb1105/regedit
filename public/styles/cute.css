@@ -3,6 +3,10 @@ html {
   cursor:url(https://static.tumblr.com/xjqjg7j/UJ8mxtr2b/01.png), auto;
 }
 
+::selection {
+  background-color: rgb(163, 184, 216);
+}
+
 @font-face {
   font-family: w95fa;
   font-weight: 400;
@@ -13,6 +17,12 @@ html {
   --background-light: #e8e1cb;
   --background-light-green: #dff7d5;
   --background-dark-green: #7aa469;
+}
+
+.text-head {
+  font-size: 2.3em;
+  margin: 0 auto 0.5em auto;
+  color: rgb(213, 131, 83);
 }
 
 .music-page img {
@@ -61,7 +71,6 @@ html {
   margin: 0 auto;
 }
 
-/* NOTES UNDER IMAGE */
 .music-page .album-notes {
   font-size: 0.9em;
   margin-top: 0.5em;
@@ -89,7 +98,7 @@ body.body-home {
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  padding-top: 10vh; /* pushes the page down */
+  padding-top: 2vh; /* pushes page down */
   height: 100%;
 }
 
@@ -229,10 +238,6 @@ body.music-page {
   padding: .5em;
 }
 
-.text-head {
-  color: rgb(213, 131, 83);
-}
-
 ::-webkit-scrollbar {
 	width: 5px;
 }
@@ -306,9 +311,17 @@ background: #90e68d50;
   text-align: center;
 }
 
+.progress-container {
+	width:250px;
+}
 
 .w3-green{
   color:#fff!important;
+  background-color:#4CAF50!important;
+}
+
+.w3-green-reading {
+	color:#fff!important;
   background-color:#4CAF50!important;
 }
 
